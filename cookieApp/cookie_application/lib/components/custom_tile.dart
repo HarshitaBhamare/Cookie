@@ -7,8 +7,7 @@ class CustomTileComponent extends StatelessWidget {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     var color = Theme.of(context).colorScheme;
-    return Expanded(
-        child: Container(
+    return Container(
       // width: size.width / ,
       height: size.height / 3.3,
       // decoration: BoxDecoration(color: color.onBackground),
@@ -110,6 +109,6 @@ class CustomTileComponent extends StatelessWidget {
                   )))
         ],
       ),
-    ));
+    );
   }
 }

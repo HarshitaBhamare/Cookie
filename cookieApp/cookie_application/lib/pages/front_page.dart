@@ -179,15 +179,18 @@ class FrontPageState extends State<FrontPage> {
                   SizedBox(
                     height: size.height / 100,
                   ),
-                  Row(
-                    children: [
-                      SizedBox(width: size.width / 50),
-                      CustomTileComponent(),
-                      SizedBox(
-                        width: size.width / 20,
-                      ),
-                      CustomTileComponent()
-                    ],
+                  Container(
+                    width: size.width,
+                    height: size.height / 3.2,
+                    // color: Colors.amber,
+                    child: ListView.builder(
+                      scrollDirection: Axis.horizontal,
+                      itemCount: 5,
+                      itemBuilder: (BuildContext context, int index) =>
+                          Container(
+                              width: size.width / 2,
+                              child: CustomTileComponent()),
+                    ),
                   ),
                   SizedBox(
                     height: size.height / 50,
